@@ -1,45 +1,55 @@
 {
-  "name": "steam-alternativ-inv",
-  "version": "0.1.0",
+  "name": "BetterInv",
+  "version": "1.4.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
+  "main": "background.js",
   "dependencies": {
+    "@node-steam/vdf": "^2.2.0",
+    "apexcharts": "^3.34.0",
+    "axios": "^0.26.1",
+    "electron-store": "^8.0.1",
+    "globaloffensive": "^2.1.0",
+    "node-fetch": "^2.6.1",
+    "readline": "^1.3.0",
+    "simple-vdf": "^1.1.1",
+    "steam-user": "^4.19.12",
+    "steamcommunity": "^3.43.1",
+    "vdf-parser": "^1.2.0",
     "vue": "^2.6.11",
+    "vue-apexcharts": "^1.6.2",
     "vue-router": "^3.2.0",
+    "vuetify": "^2.6.3",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-eslint": "~4.5.11",
     "@vue/cli-plugin-router": "~4.5.11",
     "@vue/cli-plugin-vuex": "~4.5.11",
     "@vue/cli-service": "~4.5.11",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
+    "electron": "^13.0.0",
+    "electron-devtools-installer": "^3.1.0",
     "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2020
-    },
-    "rules": {}
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-electron-builder": "~2.1.1",
+    "vue-cli-plugin-vuetify": "~2.4.7",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "volta": {
+    "node": "16.19.1"
+  }
 }
